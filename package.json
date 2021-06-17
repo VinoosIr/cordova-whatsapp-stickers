@@ -1,44 +1,40 @@
 {
-	"version": "1.0.0",
-	"name": "cordova-whatsapp-stickers",
-	"cordova_name": "WhatsApp Stickers Cordova Plugin",
-	"description": "Integration of WhatsApp Stickers to Cordova",
-	"license": "MIT",
-	"keywords": [
-		"stickers",
-		"whatsapp",
-		"whatsapp sticker",
-		"whatsapp stickers",
-		"vinoos",
-		"sticker",
-		"ecosystem:cordova",
-		"cordova-android"
-		"cordova-ios"
-	],
-	"platforms": [
-		"android",
-		"ios"
-	],
-	"engines": [
-		{
-			"name": "cordova",
-			"version": ">=3.0.0"
-		}
-	],
-	"cordova": {
-		"id": "cordova-whatsapp-stickers",
-		"platforms": [
-			"android",
-			"ios"
-		]
-	},
-	"repository": {
-		"type": "git",
-		"url": "git+https://github.com/vinoosir/cordova-whatsapp-stickers"
-	},
-	"author": "Milad Mohammadi Rezagah",
-	"bugs": {
-		"url": "https://github.com/vinoosir/cordova-whatsapp-stickers/issues"
-	},
-	"homepage": "https://github.com/vinoosir/cordova-whatsapp-stickers#readme"
+  "name": "cordova-whatsapp-stickers",
+  "version": "1.0.0",
+  "description": "Ultimate Cordova Plugin for WhatsApp Stickers to monetize hybrid apps. Add Stickers to WhatsApp with single line of JavaScript. Compatible with Cordova CLI, PhoneGap Build, Ionic, etc.",
+  "cordova": {
+    "id": "cordova-whatsapp-stickers",
+    "platforms": [
+      "android",
+      "ios"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vinoosir/cordova-whatsapp-stickers.git"
+  },
+  "keywords": [
+    "cordova",
+    "plugin",
+    "whatsapp",
+    "stickers",
+    "whatsapp stickers",
+    "ecosystem:cordova",
+    "cordova-android"
+  ],
+"devDependencies": {
+    "cordova": ">=7.0.0"
+  },
+  "engines": [
+    {
+      "name": "cordova",
+      "version": ">=7.0.0"
+    }
+  ],
+  "author": "Milad Mohammadi Rezagah",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/vinoosir/cordova-whatsapp-stickers/issues"
+  },
+  "homepage": "https://github.com/vinoosir/cordova-whatsapp-stickers#readme"
 }
