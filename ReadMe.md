@@ -142,6 +142,8 @@ For images, they must not have prefixes data:image/png;base64, or data:image/web
 
 ## Screenshots
 
+Sticker details | Adding sticker
+-------|---------------
 ![ScreenShot](https://raw.githubusercontent.com/VinoosIr/cordova-whatsapp-stickers/main/docs/screenshot1.jpg) | ![ScreenShot](https://raw.githubusercontent.com/VinoosIr/cordova-whatsapp-stickers/main/docs/screenshot2.jpg)
 
 
