@@ -11,8 +11,6 @@ WhatsApp Stickers for cordova/phonegap/ionic.
 4. [Quick Start](#quick-start)
 5. [Installation](#installation)
 6. [Usage](#usage)
-7. [API](#api)
-8. [Wiki and Docs](#wiki-and-docs)
 9. [Screenshots](#screenshots)
 10. [License](#license)
 11. [Credits](#credits)
