@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+		<meta charset="utf-8" />
+        <title>Sample</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, minimal-ui" />
+        <link rel="stylesheet" type="text/css" href="css/index.css">
+		<script type="text/javascript" src="jquery-1.9.js"></script>
+		<script type="text/javascript" src="cordova.js"></script>
+    </head>
+    <body>
+		<script>
+			document.addEventListener("deviceready", function () {
+				var parentElement = document.getElementById("deviceready");
+				var listeningElement = parentElement.querySelector('.listening');
+				var receivedElement = parentElement.querySelector('.received');
+
+				listeningElement.setAttribute('style', 'display:none;');
+				receivedElement.setAttribute('style', 'display:block;');
+				
+				console.log('Device is Ready');
+
+				$(document).on('backbutton', function() {
+					if (window.confirm('Are you sure to quit?')) navigator.app.exitApp();
+				});
+				
+			}, false);
+			
+			function addToWhatsApp(identifier, name) {
+				jsonObject = { "identifier": identifier, "name": name };
+				json = JSON.stringify(jsonObject);
+				window.WhatsAppStickers.addToWhatsApp(json, function() { alert(name + " Added to WhatsApp"); }, function(e) { alert("Error. Message: " + e); });
+			}
+		</script>
+        <div class="app">
+            <h1>Apache Cordova</h1>
+            <div id="deviceready" class="blink">
+                <p class="event listening">Connecting to Device</p>
+                <p class="event received">Device is Ready</p>
+            </div>
+            <button onclick='addToWhatsApp("1", "Cuppy");'>Add Cuppy Pack</button>
+			<button onclick='addToWhatsApp("2", "Together While Apart");'>Add Together While Apart Pack</button>
+        </div>
+    </body>
+</html>

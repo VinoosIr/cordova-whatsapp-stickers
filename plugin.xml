@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    id="cordova-whatsapp-stickers"
+    version="1.0.0">
+	
+    <name>WhatsApp Stickers Cordova Plugin</name>
+    <description>Integration of WhatsApp Stickers to Cordova</description>
+    <author>Milad Mohammadi Rezagah</author>		
+    
+    <keywords>cordova,plugin,whatsapp,stickers</keywords>
+    <engines>
+	    <engine name="cordova" version=">=3.0.0" />
+	</engines>
+	
+    <js-module src="www/WhatsAppStickers.js" name="WhatsAppStickers">
+        <clobbers target="window.WhatsAppStickers" />
+    </js-module>
+    
+    <platform name="android">
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="WhatsAppStickers" >
+                <param name="android-package" value="miladesign.cordova.wastickers.WhatsAppStickers"/>
+            </feature>
+        </config-file>
+		
+        <source-file src="src/android/WhatsAppStickers.java" target-dir="src/miladesign/cordova/wastickers" />
+        <source-file src="src/android/utils/ContentFileParser.java" target-dir="src/miladesign/cordova/wastickers/utils" />
+        <source-file src="src/android/utils/Sticker.java" target-dir="src/miladesign/cordova/wastickers/utils" />
+        <source-file src="src/android/utils/StickerContentProvider.java" target-dir="src/miladesign/cordova/wastickers/utils" />
+        <source-file src="src/android/utils/StickerPack.java" target-dir="src/miladesign/cordova/wastickers/utils" />
+        <source-file src="src/android/utils/StickerPackLoader.java" target-dir="src/miladesign/cordova/wastickers/utils" />
+        <source-file src="src/android/utils/StickerPackValidator.java" target-dir="src/miladesign/cordova/wastickers/utils" />
+        <source-file src="src/android/utils/WhitelistCheck.java" target-dir="src/miladesign/cordova/wastickers/utils" />
+    
+		<framework src="src/android/build.gradle" custom="true" type="gradleReference" />
+
+		<framework src="androidx.annotation:annotation:1.2.0" />
+		<framework src="com.facebook.fresco:fresco:2.2.0" />
+		<framework src="com.facebook.fresco:webpsupport:2.2.0" />
+		<framework src="com.facebook.fresco:animated-webp:2.2.0" />
+		<framework src="com.facebook.fresco:animated-base:2.2.0" />
+    
+		<config-file mode="merge" parent="/manifest/application" platform="android" target="AndroidManifest.xml">
+            <provider android:authorities="miladesign.cordova.wastickers.utils.stickercontentprovider" android:enabled="true" android:exported="true" android:name="miladesign.cordova.wastickers.utils.StickerContentProvider" android:readPermission="com.whatsapp.sticker.READ" />
+        </config-file>
+    </platform>
+	
+	<platform name="ios">
+		<config-file parent="/*" target="config.xml">
+			<feature name="WhatsAppSticker">
+				<param name="ios-package" value="WhatsAppSticker" />
+			</feature>
+		</config-file>
+
+		<config-file target="*-Info.plist" parent="LSApplicationQueriesSchemes">
+			<array>
+				<string>whatsapp</string>
+			</array>
+		</config-file>
+		
+		<source-file src="src/ios/WhatsAppSticker.m" />
+	</platform>
+</plugin>

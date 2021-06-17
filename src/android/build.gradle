@@ -1,0 +1,10 @@
+android {
+    aaptOptions { 
+		noCompress "webp" 
+    }
+    defaultConfig {
+		def contentProviderAuthority = "miladesign.cordova.wastickers.utils.stickercontentprovider" 
+		manifestPlaceholders = [contentProviderAuthority: contentProviderAuthority] 
+		buildConfigField "String", "CONTENT_PROVIDER_AUTHORITY", "\"${contentProviderAuthority}\""
+    }
+}

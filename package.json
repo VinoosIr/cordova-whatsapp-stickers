@@ -1,0 +1,44 @@
+{
+	"version": "1.0.0",
+	"name": "cordova-whatsapp-stickers",
+	"cordova_name": "WhatsApp Stickers Cordova Plugin",
+	"description": "Integration of WhatsApp Stickers to Cordova",
+	"license": "MIT",
+	"keywords": [
+		"stickers",
+		"whatsapp",
+		"whatsapp sticker",
+		"whatsapp stickers",
+		"vinoos",
+		"sticker",
+		"ecosystem:cordova",
+		"cordova-android"
+		"cordova-ios"
+	],
+	"platforms": [
+		"android",
+		"ios"
+	],
+	"engines": [
+		{
+			"name": "cordova",
+			"version": ">=3.0.0"
+		}
+	],
+	"cordova": {
+		"id": "cordova-whatsapp-stickers",
+		"platforms": [
+			"android",
+			"ios"
+		]
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/vinoosir/cordova-whatsapp-stickers"
+	},
+	"author": "Milad Mohammadi Rezagah",
+	"bugs": {
+		"url": "https://github.com/vinoosir/cordova-whatsapp-stickers/issues"
+	},
+	"homepage": "https://github.com/vinoosir/cordova-whatsapp-stickers#readme"
+}
