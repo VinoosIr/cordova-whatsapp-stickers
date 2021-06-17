@@ -98,8 +98,10 @@ function addToWhatsApp(identifier, name) {
 }
 ```
 
+[Read more about stickers from WhatsApp](https://github.com/WhatsApp/stickers/tree/master/Android)
+
 ### For iOS
-Step 3: Want interstitial Ad to earn more money ? Easy, 2 lines of code. 
+Step 3: To add sticker pack to WhatsApp use this code. 
 
 ```javascript
 data = {
@@ -135,6 +137,8 @@ window.WhatsAppStickers.addToWhatsApp(json, function() { alert(name + " Added to
 ```
 
 For images, they must not have prefixes data:image/png;base64, or data:image/webp;base64, otherwise, WhatsApp will point out an error when sharing the Sticker.
+
+[Read more about stickers from WhatsApp](https://github.com/WhatsApp/stickers/tree/master/iOS)
 
 ## Screenshots
 
